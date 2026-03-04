@@ -14,6 +14,11 @@ public class RobotOnMoon
         return default(string);
     }
 
+    public string test()
+    {
+        return "Test"
+    }
+
     #region Testing code
 
     [STAThread]
