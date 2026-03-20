@@ -199,6 +199,41 @@ class Program
         Console.WriteLine($"Read from XML: {pricesFromXml.Count} records");
 
         Console.WriteLine("\nDone.");
+        
+        
+        Console.WriteLine("Chapter 2");
+        Console.WriteLine("Task 1");
+            
+        Func<int, bool> isLeapYear = year =>
+            (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+
+        Console.WriteLine($"2024 -> {isLeapYear(2024)}");
+        Console.WriteLine($"2023 -> {isLeapYear(2023)}");
+        Console.WriteLine($"2000 -> {isLeapYear(2000)}");
+        Console.WriteLine($"1900 -> {isLeapYear(1900)}");
+
+        Console.WriteLine();
+        Console.WriteLine("Task 2");
+
+        RandomizedList<int> numbers = new RandomizedList<int>();
+
+        Console.WriteLine($"Is empty: {numbers.IsEmpty()}");
+
+        numbers.Add(10);
+        numbers.Add(20);
+        numbers.Add(30);
+        numbers.Add(40);
+        numbers.Add(50);
+
+        Console.WriteLine($"Is empty after adding elements: {numbers.IsEmpty()}");
+        Console.WriteLine($"Collection: {numbers}");
+
+        Console.WriteLine($"Get(0): {numbers.Get(0)}");
+        Console.WriteLine($"Get(2): {numbers.Get(2)}");
+        Console.WriteLine($"Get(4): {numbers.Get(4)}");
+
+        Console.WriteLine();
+        Console.WriteLine("Done.");
     }
 
     static List<GoldPrice> GetGoldPricesInChunks(GoldDataService dataService, DateTime startDate, DateTime endDate)
